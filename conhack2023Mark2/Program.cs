@@ -1,12 +1,12 @@
 using System.Data;
 using System.Data.SqlClient;
-
 using MySqlConnector;
+using conhack2023;
+
 namespace conhack2023Mark2
 {
     internal static class Program
     {
-
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -17,25 +17,11 @@ namespace conhack2023Mark2
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            MySqlConnection connection = new MySqlConnection();
-            connection.ConnectionString = ("Server=localhost; user id= root; password=rootpassword; database=conhacks");
+            Application.Run(new Form2());
 
-            try
-            {
-                connection.Open();
-                MessageBox.Show("database is connected");
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            SQL sql = new SQL("Server=localhost; user id= root; password=rootpassword; database=conhacks");
 
-            using var cmd = new MySqlCommand();
-            cmd.CommandText = "";
-
-            Application.Run(new Form1());
-
+            sql.openConnection();
         }
     }
 }
