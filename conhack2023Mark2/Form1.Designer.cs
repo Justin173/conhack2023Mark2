@@ -35,18 +35,20 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Screenshot_2023_10_22_144037;
-            pictureBox1.Location = new Point(-1, -2);
+            pictureBox1.Location = new Point(-2, -3);
+            pictureBox1.Margin = new Padding(5, 5, 5, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1322, 676);
+            pictureBox1.Size = new Size(2148, 1082);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1253, 675);
+            ClientSize = new Size(2036, 1080);
             Controls.Add(pictureBox1);
+            Margin = new Padding(5, 5, 5, 5);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
